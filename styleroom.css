@@ -1,0 +1,170 @@
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f3f4f6;
+  color: #222;
+}
+
+.room {
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 48px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 48px auto;
+  padding: 48px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 6px 30px rgba(15, 23, 42, 0.06);
+}
+
+.living-room {
+  position: relative;
+}
+
+.living-room img {
+  width: 70%;
+  height: 90%;
+  display: block;
+  border-radius: 2px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  object-fit: cover;
+}
+
+.info {
+  max-width: 420px;
+  margin: 0;
+}
+
+.hero-title {
+  font-size: 48px;
+  line-height: 1.05;
+  margin: 0 0 18px 0;
+  font-weight: 700;
+  color: #111827;
+}
+
+.info p {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 22px;
+  text-align: left;
+} 
+.info h1{
+  font-size: 24px;
+  margin: 0 0 12px 0;
+  align-items: top right corner;
+}
+
+.buttons {
+  margin-bottom: 18px;
+  display: flex;
+  gap: 14px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 26px;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  border: 1px solid transparent;
+}
+.btn.quote {
+  background: #0f1724;
+  color: #fff;
+}
+.btn.portfolio {
+  background: transparent;
+  color: #111827;
+  border-color: #e6e6e6;
+}
+
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social span {
+  margin-right: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background: #f0f0f0;
+  margin: 22px 0;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-start;
+  color: #6b7280;
+}
+.social span {
+  font-size: 14px;
+  color: #6b7280;
+}
+.social img {
+  width: 20px;
+  height: 20px;
+  filter: grayscale(1) opacity(0.9);
+}
+
+@media (max-width: 900px) {
+  .room {
+    grid-template-columns: 1fr;
+    padding: 28px;
+    gap: 20px;
+  }
+  .hero-title {
+    font-size: 32px;
+  }
+  .living-room img {
+    border-radius: 6px;
+  }
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+  .showcase {
+    /* Scale the whole hero to 1/5 (20%) while keeping it fitting the viewport */
+    transform: scale(0.2);
+    transform-origin: top left;
+    /* Increase the nominal width so the scaled result fills the viewport */
+    width: 500%;
+    padding: 12px;
+    margin: 8px auto;
+  }
+  .hero-title {
+    font-size: 9.6px; /* ~48px / 5 */
+    line-height: 1.1;
+  }
+  .info p {
+    font-size: 3.2px; /* ~16px / 5 */
+  }
+  .btn {
+    height: 9.6px; /* ~48px / 5 */
+    font-size: 3px;
+    padding: 0 6px;
+  }
+}
